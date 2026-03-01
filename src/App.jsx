@@ -1,17 +1,14 @@
-import { useDispatch } from "react-redux";
-import { Switch, Route } from "react-router-dom";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
+import PageContent from "./layout/PageContent";
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/">
-        <h1>Home Page</h1>
-      </Route>
-
-      <Route path="/about">
-        <h1>About Page</h1>
-      </Route>
-    </Switch>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <PageContent />
+      <Footer />
+    </div>
   );
 }
 
