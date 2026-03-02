@@ -1,3 +1,5 @@
+import ProductCard from "../components/ProductCard";
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -177,6 +179,101 @@ function HomePage() {
                 KIDS
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-white py-35 md:py-24">
+        <div className="max-w-[1200px] mx-auto px-12 md:px-6">
+          {/* Title */}
+          <div className="text-center mb-12 md:mb-16">
+            <p className="text-[#737373] text-[28px] font-semibold md:text-[16px]">
+              Featured Products
+            </p>
+
+            <h2 className="text-[36px] md:text-[28px] font-bold text-[#252B42] mt-2 leading-tight">
+              <span className="block md:inline md:mr-2">BESTSELLER</span>
+              <span className="block md:inline">PRODUCTS</span>
+            </h2>
+
+            <p className="text-[#737373] text-[18px] md:text-[16px] mt-2 leading-relaxed font-semibold">
+              <span className="block md:inline md:mr-1">
+                Problems trying to resolve the
+              </span>
+              <span className="block md:inline">conflict between</span>
+            </p>
+          </div>
+
+          {/* Grid */}
+          <div
+            className="
+                grid grid-cols-1 gap-12
+                md:grid-cols-4 md:gap-8
+                "
+          >
+            <ProductCard
+              image="/images/product1.jpg"
+              title="Graphic Design"
+              department="English Department"
+              oldPrice="16.48"
+              newPrice="6.48"
+            />
+
+            <ProductCard
+              image="/images/product2.jpg"
+              title="Graphic Design"
+              department="English Department"
+              oldPrice="16.48"
+              newPrice="6.48"
+            />
+
+            <ProductCard
+              image="/images/product3.jpg"
+              title="Graphic Design"
+              department="English Department"
+              oldPrice="16.48"
+              newPrice="6.48"
+            />
+
+            <ProductCard
+              image="/images/product4.jpg"
+              title="Graphic Design"
+              department="English Department"
+              oldPrice="16.48"
+              newPrice="6.48"
+            />
+
+            <ProductCard
+              image="/images/product5.jpg"
+              title="Graphic Design"
+              department="English Department"
+              oldPrice="16.48"
+              newPrice="6.48"
+            />
+
+            <ProductCard
+              image="/images/product6.jpg"
+              title="Graphic Design"
+              department="English Department"
+              oldPrice="16.48"
+              newPrice="6.48"
+            />
+
+            <ProductCard
+              image="/images/product7.jpg"
+              title="Graphic Design"
+              department="English Department"
+              oldPrice="16.48"
+              newPrice="6.48"
+            />
+
+            <ProductCard
+              image="/images/product8.jpg"
+              title="Graphic Design"
+              department="English Department"
+              oldPrice="16.48"
+              newPrice="6.48"
+            />
           </div>
         </div>
       </section>
