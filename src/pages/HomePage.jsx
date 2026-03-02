@@ -2,10 +2,11 @@ import ProductCard from "../components/ProductCard";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 function HomePage() {
   const slides = [
@@ -276,6 +277,90 @@ function HomePage() {
             />
           </div>
         </div>
+      </section>
+
+      <section className="w-full bg-[#23856D]">
+        <Swiper
+          modules={[Navigation]}
+          navigation={{
+            nextEl: ".promo-next",
+            prevEl: ".promo-prev",
+          }}
+          loop
+          className="relative"
+        >
+          {/* SLIDE 1 */}
+          <SwiperSlide>
+            <div className="relative max-w-[1200px] mx-auto px-6 pt-60 md:pt-20 pb-0 md:pt-24 md:pb-0 flex flex-col md:flex-row items-center">
+              {/* TEXT */}
+              <div className="text-white text-center md:text-left md:w-1/2 flex flex-col gap-10 z-10">
+                <p className="tracking-[3px] text-[18px] md:text-[24px] font-semibold">
+                  SUMMER 2020
+                </p>
+
+                <h2 className="text-[50px] md:text-[60px] font-bold leading-tight md:max-w-[420px]">
+                  Vita Classic <br className="md:hidden" />
+                  Product
+                </h2>
+
+                <p className="text-[24px] md:text-[20px] max-w-[400px] md:max-w-[520px] leading-relaxed font-semibold">
+                  {/* Mobile */}
+                  <span className="md:hidden">
+                    We know how large objects <br />
+                    will act, but things on a <br />
+                    small scale.
+                  </span>
+
+                  {/* Desktop */}
+                  <span className="hidden md:inline">
+                    We know how large objects will act, We know how are objects
+                    will act, We know
+                  </span>
+                </p>
+
+                <div className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start gap-8 md:gap-20 mt-4">
+                  <span className="text-[32px] md:text-[32px] font-semibold">
+                    $16.48
+                  </span>
+
+                  <button className="bg-[#2DC071] px-16 py-5 md:px-12 md:py-4 rounded-md font-semibold text-[22px] md:text-[18px]">
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+
+              {/* IMAGE */}
+              <div className="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end overflow-hidden">
+                <img
+                  src="/images/vita-model.png"
+                  alt="Vita Product"
+                  className="w-full md:w-[420px] h-[700px] md:h-auto object-cover object-top"
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+
+          {/* SLIDE 2 (placeholder) */}
+          <SwiperSlide>
+            <div className="h-[600px] md:h-[500px] flex items-center justify-center text-white">
+              Second slide coming soon
+            </div>
+          </SwiperSlide>
+
+          {/* ARROWS */}
+          {/* ARROWS */}
+          <button className="promo-prev absolute left-4 md:left-10 top-1/2 -translate-y-1/2 text-white opacity-90 hover:opacity-100 transition z-20">
+            <ChevronLeft size={56} strokeWidth={2.5} />
+          </button>
+
+          <button className="promo-next absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-white opacity-90 hover:opacity-100 transition z-20">
+            <ChevronRight size={56} strokeWidth={2.5} />
+          </button>
+          {/* DESKTOP SLIDE INDICATOR */}
+          <div className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 gap-4 z-10">
+            <div className="swiper-pagination"></div>
+          </div>
+        </Swiper>
       </section>
     </>
   );
