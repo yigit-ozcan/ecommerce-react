@@ -362,6 +362,150 @@ function HomePage() {
           </div>
         </Swiper>
       </section>
+
+      <section className="w-full bg-[#F3F3F3] overflow-hidden">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="relative flex flex-col md:flex-row md:h-[650px]">
+            {/* TEXT */}
+            <div
+              className="
+                    w-full
+                    md:w-[50vw] md:ml-[35vw]
+                    flex
+                    flex-col
+                    items-center
+                    md:items-start
+                    text-center
+                    md:text-left
+                    justify-center
+                    pt-40 pb-16
+                    md:py-0 md:justify-center
+                    md:pl-20
+                "
+            >
+              <p className="text-[#BDBDBD] tracking-[3px] text-[18px] font-semibold">
+                SUMMER 2020
+              </p>
+
+              <h2
+                className="
+                    mt-4
+                    text-[50px]
+                    md:text-[52px]
+                    font-bold
+                    leading-[1.2]
+                    text-[#252B42]
+                    max-w-[280px]
+                    md:max-w-none
+                    md:whitespace-nowrap
+                "
+              >
+                Part of the Neural <br className="hidden md:block" />
+                Universe
+              </h2>
+
+              <p
+                className="
+                    mt-6
+                    text-[26px]
+                    leading-[1.6]
+                    text-[#737373]
+                    max-w-[300px]
+                    md:max-w-[420px]
+                    font-semibold
+                    "
+              >
+                We know how large objects will act, but things on a small scale.
+              </p>
+
+              <div
+                className="
+                    mt-8
+                    flex
+                    flex-col
+                    md:flex-row
+                    gap-4
+                    items-center
+                    md:items-start
+                    "
+              >
+                <button
+                  className="
+                        bg-[#23A6F0] md:bg-[#2DC071]
+                        text-white
+                        font-semibold
+                        px-7
+                        py-4
+                        rounded-md
+                        text-[16px]
+                        md:text-[20px]
+                        w-auto min-w-[180px]
+                    "
+                >
+                  BUY NOW
+                </button>
+
+                <button
+                  className="
+                        border border-[#23A6F0]
+                        text-[#23A6F0]
+                        md:border-[#2DC071]
+                        md:text-[#2DC071]
+                        font-semibold
+                        px-7
+                        py-4
+                        rounded-md
+                        text-[16px]
+                        md:text-[20px]
+                        w-auto min-w-[180px]
+                    "
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+
+            {/* IMAGE */}
+            <div
+              className="
+                    w-screen
+                    relative
+                    left-1/2
+                    -ml-[50vw]
+                    mt-2
+                    md:mt-0
+
+                    md:absolute
+                    md:left-[calc(50%-1000px)]
+                    md:w-[50vw]
+                    md:h-full
+                    md:ml-0
+
+                    flex
+                    justify-center
+                    md:justify-start
+                "
+            >
+              <img
+                src="/images/neural-couple.png"
+                alt="Neural Universe"
+                className="
+                    w-full
+                    h-[420px]
+                    md:w-full
+                    md:h-full
+                    object-cover
+                    object-bottom
+                    md:object-cover
+                    md:object-left
+                    scale-[1.2]
+                    md:scale-100
+                    "
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
