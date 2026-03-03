@@ -1,4 +1,5 @@
 import ProductCard from "../components/ProductCard";
+import PostCard from "../components/PostCard";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -503,6 +504,56 @@ function HomePage() {
                     "
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-[#F3F3F3] py-20 md:py-24">
+        <div className="max-w-[1200px] md:max-w-[1600px] mx-auto px-12 md:px-12">
+          {/* HEADER */}
+          <div className="text-center mb-16">
+            <p className="text-[#23A6F0] text-[14px] md:text-[18px] font-semibold">
+              Practice Advice
+            </p>
+
+            <h2 className="text-[36px] md:text-[48px] font-bold text-[#252B42] mt-3">
+              Featured Posts
+            </h2>
+
+            <p className="text-[#737373] text-[16px] md:text-[22px] mt-4 max-w-[600px] mx-auto leading-[1.6] md:font-semibold">
+              Problems trying to resolve the conflict between the two major
+              realms of Classical physics: Newtonian mechanics
+            </p>
+          </div>
+
+          {/* GRID */}
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8">
+            <PostCard
+              imageMobile="/images/post4.jpg"
+              imageDesktop="/images/post1.jpg"
+              title="Loudest à la Madison #1 (L'integral)"
+              description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+              date="22 April 2021"
+              comments="10"
+            />
+
+            <PostCard
+              imageMobile="/images/post5.jpg"
+              imageDesktop="/images/post2.jpg"
+              title="Loudest à la Madison #1 (L'integral)"
+              description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+              date="22 April 2021"
+              comments="10"
+            />
+
+            <PostCard
+              imageMobile="/images/post6.jpg"
+              imageDesktop="/images/post3.jpg"
+              title="Loudest à la Madison #1 (L'integral)"
+              description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+              date="22 April 2021"
+              comments="10"
+            />
           </div>
         </div>
       </section>
