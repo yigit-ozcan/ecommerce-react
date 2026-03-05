@@ -99,7 +99,7 @@ function Header() {
             </div>
           </div>
 
-          {/* MOBILE HAMBURGER (unchanged) */}
+          {/* MOBILE HAMBURGER */}
           <div
             className="flex flex-col justify-center gap-[6px] md:hidden cursor-pointer"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -125,11 +125,37 @@ function Header() {
 
       {/* ===== MOBILE MENU ===== */}
       {menuOpen && (
-        <div className="flex flex-col items-center gap-8 mt-15 py-8 text-[40px] font-medium text-[#737373] md:hidden">
-          <span>Home</span>
-          <span>Product</span>
-          <span>Pricing</span>
-          <span>Contact</span>
+        <div className="md:hidden w-full bg-white flex flex-col items-center py-10 gap-10 border-t border-gray-200">
+          {/* NAV LINKS */}
+          <div className="flex flex-col items-center gap-8 text-[36px] font-medium text-[#737373]">
+            <span>Home</span>
+            <span>Shop</span>
+            <span>About</span>
+            <span>Blog</span>
+            <span>Contact</span>
+            <span>Pages</span>
+          </div>
+
+          {/* LOGIN */}
+          <div className="flex items-center gap-3 text-[#23A6F0] text-[36px] font-medium">
+            <User size={36} />
+            <span>Login / Register</span>
+          </div>
+
+          {/* ICONS */}
+          <div className="flex flex-col items-center gap-6 text-[#23A6F0]">
+            <Search size={36} />
+
+            <div className="flex items-center gap-2">
+              <ShoppingCart size={36} />
+              <span className="text-[16px] font-semibold">1</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Heart size={36} />
+              <span className="text-[16px] font-semibold">1</span>
+            </div>
+          </div>
         </div>
       )}
     </header>

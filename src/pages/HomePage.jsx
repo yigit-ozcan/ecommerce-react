@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 function HomePage() {
   const slides = [
     {
-      image: "/images/hero1.jpg",
+      image: "/images/homepage/hero1.jpg",
       subtitle: "SUMMER 2020",
       title: "NEW COLLECTION",
       description:
@@ -23,7 +23,7 @@ function HomePage() {
       bgDesktop: "md:bg-[position:78%_35%]",
     },
     {
-      image: "/images/hero2.jpg",
+      image: "/images/homepage/hero2.jpg",
       subtitle: "LIMITED EDITION",
       title: "FRESH STYLE",
       description:
@@ -137,7 +137,7 @@ function HomePage() {
             {/* MEN */}
             <div className="relative w-full md:col-span-2 md:row-span-2">
               <img
-                src="/images/men.jpg"
+                src="/images/homepage/men.jpg"
                 alt="Men"
                 className="w-full h-[700px] md:h-[600px] object-cover object-top md:object-center"
               />
@@ -149,7 +149,7 @@ function HomePage() {
             {/* WOMEN */}
             <div className="relative w-full md:col-span-1 md:row-span-2">
               <img
-                src="/images/women.jpg"
+                src="/images/homepage/women.jpg"
                 alt="Women"
                 className="w-full h-[700px] md:h-[600px] object-cover object-top md:object-center"
               />
@@ -161,7 +161,7 @@ function HomePage() {
             {/* ACCESSORIES */}
             <div className="relative w-full md:col-span-1 md:row-span-1">
               <img
-                src="/images/accessories.jpg"
+                src="/images/homepage/accessories.jpg"
                 alt="Accessories"
                 className="w-full h-[370px] md:h-[280px] object-cover object-center"
               />
@@ -173,7 +173,7 @@ function HomePage() {
             {/* KIDS */}
             <div className="relative w-full md:col-span-1 md:row-span-1">
               <img
-                src="/images/kids.jpg"
+                src="/images/homepage/kids.jpg"
                 alt="Kids"
                 className="w-full h-[370px] md:h-[280px] object-cover object-center"
               />
@@ -206,76 +206,87 @@ function HomePage() {
             </p>
           </div>
 
-          {/* Grid */}
-          <div
-            className="
-                grid grid-cols-1 gap-12
-                md:grid-cols-4 md:gap-8
-                "
-          >
-            <ProductCard
-              image="/images/product1.jpg"
-              title="Graphic Design"
-              department="English Department"
-              oldPrice="16.48"
-              newPrice="6.48"
-            />
+          {/* FLEX */}
+          <div className="flex flex-col gap-12 md:flex-row md:flex-wrap md:gap-8">
+            <div className="md:w-[calc(25%-1.5rem)]">
+              <ProductCard
+                image="/images/homepage/product1.jpg"
+                title="Graphic Design"
+                department="English Department"
+                oldPrice="16.48"
+                newPrice="6.48"
+              />
+            </div>
 
-            <ProductCard
-              image="/images/product2.jpg"
-              title="Graphic Design"
-              department="English Department"
-              oldPrice="16.48"
-              newPrice="6.48"
-            />
+            <div className="md:w-[calc(25%-1.5rem)]">
+              <ProductCard
+                image="/images/homepage/product2.jpg"
+                title="Graphic Design"
+                department="English Department"
+                oldPrice="16.48"
+                newPrice="6.48"
+              />
+            </div>
 
-            <ProductCard
-              image="/images/product3.jpg"
-              title="Graphic Design"
-              department="English Department"
-              oldPrice="16.48"
-              newPrice="6.48"
-            />
+            <div className="md:w-[calc(25%-1.5rem)]">
+              <ProductCard
+                image="/images/homepage/product3.jpg"
+                title="Graphic Design"
+                department="English Department"
+                oldPrice="16.48"
+                newPrice="6.48"
+              />
+            </div>
 
-            <ProductCard
-              image="/images/product4.jpg"
-              title="Graphic Design"
-              department="English Department"
-              oldPrice="16.48"
-              newPrice="6.48"
-            />
+            <div className="md:w-[calc(25%-1.5rem)]">
+              <ProductCard
+                image="/images/homepage/product4.jpg"
+                title="Graphic Design"
+                department="English Department"
+                oldPrice="16.48"
+                newPrice="6.48"
+              />
+            </div>
 
-            <ProductCard
-              image="/images/product5.jpg"
-              title="Graphic Design"
-              department="English Department"
-              oldPrice="16.48"
-              newPrice="6.48"
-            />
+            <div className="md:w-[calc(25%-1.5rem)]">
+              <ProductCard
+                image="/images/homepage/product5.jpg"
+                title="Graphic Design"
+                department="English Department"
+                oldPrice="16.48"
+                newPrice="6.48"
+              />
+            </div>
 
-            <ProductCard
-              image="/images/product6.jpg"
-              title="Graphic Design"
-              department="English Department"
-              oldPrice="16.48"
-              newPrice="6.48"
-            />
+            <div className="md:w-[calc(25%-1.5rem)]">
+              <ProductCard
+                image="/images/homepage/product6.jpg"
+                title="Graphic Design"
+                department="English Department"
+                oldPrice="16.48"
+                newPrice="6.48"
+              />
+            </div>
 
-            <ProductCard
-              image="/images/product7.jpg"
-              title="Graphic Design"
-              department="English Department"
-              oldPrice="16.48"
-              newPrice="6.48"
-            />
+            <div className="md:w-[calc(25%-1.5rem)]">
+              <ProductCard
+                image="/images/homepage/product7.jpg"
+                title="Graphic Design"
+                department="English Department"
+                oldPrice="16.48"
+                newPrice="6.48"
+              />
+            </div>
 
-            <ProductCard
-              image="/images/product8.jpg"
-              title="Graphic Design"
-              department="English Department"
-              oldPrice="16.48"
-              newPrice="6.48"
-            />
+            <div className="md:w-[calc(25%-1.5rem)]">
+              <ProductCard
+                image="/images/homepage/product8.jpg"
+                title="Graphic Design"
+                department="English Department"
+                oldPrice="16.48"
+                newPrice="6.48"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -333,7 +344,7 @@ function HomePage() {
               {/* IMAGE */}
               <div className="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end overflow-hidden">
                 <img
-                  src="/images/vita-model.png"
+                  src="/images/homepage/vita-model.png"
                   alt="Vita Product"
                   className="w-full md:w-[420px] h-[700px] md:h-auto object-cover object-top"
                 />
@@ -488,7 +499,7 @@ function HomePage() {
                 "
             >
               <img
-                src="/images/neural-couple.png"
+                src="/images/homepage/neural-couple.png"
                 alt="Neural Universe"
                 className="
                     w-full
@@ -526,34 +537,39 @@ function HomePage() {
             </p>
           </div>
 
-          {/* GRID */}
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8">
-            <PostCard
-              imageMobile="/images/post4.jpg"
-              imageDesktop="/images/post1.jpg"
-              title="Loudest à la Madison #1 (L'integral)"
-              description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
-              date="22 April 2021"
-              comments="10"
-            />
+          <div className="flex flex-col gap-12 md:flex-row md:gap-8">
+            <div className="md:w-1/3">
+              <PostCard
+                imageMobile="/images/homepage/post4.jpg"
+                imageDesktop="/images/homepage/post1.jpg"
+                title="Loudest à la Madison #1 (L'integral)"
+                description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+                date="22 April 2021"
+                comments="10"
+              />
+            </div>
 
-            <PostCard
-              imageMobile="/images/post5.jpg"
-              imageDesktop="/images/post2.jpg"
-              title="Loudest à la Madison #1 (L'integral)"
-              description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
-              date="22 April 2021"
-              comments="10"
-            />
+            <div className="md:w-1/3">
+              <PostCard
+                imageMobile="/images/homepage/post5.jpg"
+                imageDesktop="/images/homepage/post2.jpg"
+                title="Loudest à la Madison #1 (L'integral)"
+                description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+                date="22 April 2021"
+                comments="10"
+              />
+            </div>
 
-            <PostCard
-              imageMobile="/images/post6.jpg"
-              imageDesktop="/images/post3.jpg"
-              title="Loudest à la Madison #1 (L'integral)"
-              description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
-              date="22 April 2021"
-              comments="10"
-            />
+            <div className="md:w-1/3">
+              <PostCard
+                imageMobile="/images/homepage/post6.jpg"
+                imageDesktop="/images/homepage/ post3.jpg"
+                title="Loudest à la Madison #1 (L'integral)"
+                description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+                date="22 April 2021"
+                comments="10"
+              />
+            </div>
           </div>
         </div>
       </section>
