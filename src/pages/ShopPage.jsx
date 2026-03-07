@@ -210,6 +210,48 @@ function ShopPage() {
           </div>
         </div>
       </section>
+
+      <section className="w-full bg-[#FAFAFA] py-16">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="flex flex-col items-center gap-20 md:flex-row md:justify-between md:gap-8 opacity-70">
+            <img
+              src="/images/shoppage/logo1.png"
+              alt="Hooli"
+              className="h-12 md:h-14 object-contain"
+            />
+
+            <img
+              src="/images/shoppage/logo2.png"
+              alt="Lyft"
+              className="h-16 md:h-14 object-contain"
+            />
+
+            <img
+              src="/images/shoppage/logo3.png"
+              alt="Brand"
+              className="h-20 md:h-14 object-contain"
+            />
+
+            <img
+              src="/images/shoppage/logo4.png"
+              alt="Stripe"
+              className="h-14 md:h-14 object-contain"
+            />
+
+            <img
+              src="/images/shoppage/logo5.png"
+              alt="AWS"
+              className="h-18 md:h-14 object-contain"
+            />
+
+            <img
+              src="/images/shoppage/logo6.png"
+              alt="Reddit"
+              className="h-20 md:h-14 object-contain"
+            />
+          </div>
+        </div>
+      </section>
     </>
   );
 }
