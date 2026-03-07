@@ -229,7 +229,7 @@ function ShopPage() {
             <img
               src="/images/shoppage/logo3.png"
               alt="Brand"
-              className="h-20 md:h-14 object-contain"
+              className="h-20 md:h-20 object-contain"
             />
 
             <img

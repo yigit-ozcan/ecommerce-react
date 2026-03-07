@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Search,
   ShoppingCart,
@@ -62,10 +63,14 @@ function Header() {
 
           {/* MENU */}
           <div className="hidden md:flex ml-44 gap-6 text-[#737373] font-medium text-[18px] items-center">
-            <span>Home</span>
+            <Link to="/" className="hover:text-[#252B42]">
+              Home
+            </Link>
 
             <div className="flex items-center gap-1">
-              <span>Shop</span>
+              <Link to="/shop" className="hover:text-[#252B42]">
+                Shop
+              </Link>
               <ChevronDown size={14} className="text-[#737373]" />
             </div>
 
