@@ -76,7 +76,9 @@ function Header() {
 
             <span>About</span>
             <span>Blog</span>
-            <span>Contact</span>
+            <Link to="/contact" className="hover:text-[#252B42]">
+              Contact
+            </Link>
             <span>Pages</span>
           </div>
         </div>
