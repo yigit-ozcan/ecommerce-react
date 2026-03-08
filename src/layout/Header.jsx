@@ -74,7 +74,9 @@ function Header() {
               <ChevronDown size={14} className="text-[#737373]" />
             </div>
 
-            <span>About</span>
+            <Link to="/about" className="hover:text-[#252B42]">
+              About
+            </Link>
             <span>Blog</span>
             <Link to="/contact" className="hover:text-[#252B42]">
               Contact
