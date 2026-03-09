@@ -39,6 +39,30 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section className="w-full bg-gray-100 px-6 py-20">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-start gap-10 md:gap-20">
+          {/* LEFT SIDE */}
+          <div className="flex flex-col max-w-xl text-center md:text-left">
+            <span className="text-red-500 text-[20px] md:text-[24px] font-semibold mb-4">
+              Problems trying
+            </span>
+
+            <h2 className="text-[32px] md:text-[35px] font-bold text-slate-800 leading-snug max-w-[350px] mx-auto md:mx-0 md:max-w-[520px]">
+              Met minim Mollie non desert Alamo est sit cliqueey dolor do met
+              sent.
+            </h2>
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div className="flex items-start text-left md:max-w-[520px] md:mt-[52px]">
+            <p className="mx-10 text-gray-500 text-[22px] md:text-[20px] md:text-base leading-relaxed font-semibold md:mx-0 md:max-w-full">
+              Problems trying to resolve the conflict between the two major
+              realms of Classical physics: Newtonian mechanics
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
