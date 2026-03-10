@@ -63,6 +63,50 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section className="w-full bg-gray-100 px-6 py-24">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-28 md:gap-0 text-center">
+          {/* ITEM */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-[64px] md:text-[56px] font-bold text-slate-800">
+              15K
+            </h3>
+            <p className="text-gray-500 text-[20px] font-semibold mt-2">
+              Happy Customers
+            </p>
+          </div>
+
+          {/* ITEM */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-[64px] md:text-[56px] font-bold text-slate-800">
+              150K
+            </h3>
+            <p className="text-gray-500 text-[20px] font-semibold mt-2">
+              Monthly Visitors
+            </p>
+          </div>
+
+          {/* ITEM */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-[64px] md:text-[56px] font-bold text-slate-800">
+              15
+            </h3>
+            <p className="text-gray-500 text-[20px] font-semibold mt-2">
+              Countries Worldwide
+            </p>
+          </div>
+
+          {/* ITEM */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-[64px] md:text-[56px] font-bold text-slate-800">
+              100+
+            </h3>
+            <p className="text-gray-500 text-[20px] font-semibold mt-2">
+              Top Partners
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
