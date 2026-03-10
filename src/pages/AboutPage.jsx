@@ -107,6 +107,33 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section className="w-full bg-gray-100 px-6 py-24">
+        <div className="max-w-6xl mx-auto flex justify-center">
+          <div className="relative w-full max-w-[340px] h-[360px] md:h-auto md:max-w-4xl">
+            {/* Image */}
+            <img
+              src="/images/aboutpage/video.png"
+              alt="video preview"
+              className="w-full h-full rounded-2xl object-cover"
+            />
+
+            {/* Play Button */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-[#23A6F0] rounded-full flex items-center justify-center shadow-lg cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="white"
+                  viewBox="0 0 24 24"
+                  className="w-6 h-6 md:w-8 md:h-8"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
