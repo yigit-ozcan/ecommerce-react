@@ -1,4 +1,5 @@
 import React from "react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 function AboutPage() {
   return (
@@ -129,6 +130,92 @@ function AboutPage() {
                 >
                   <path d="M8 5v14l11-7z" />
                 </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-gray-100 px-6 py-24">
+        <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
+          {/* TITLE */}
+          <h2 className="text-[45px] max-w-[250px] md:text-[44px] md:max-w-[350px] font-bold text-slate-800">
+            Meet Our Team
+          </h2>
+
+          <p className="mt-4 text-gray-500 text-[25px] md:text-[22px] max-w-[400px] md:max-w-[550px] leading-relaxed">
+            Problems trying to resolve the conflict between the two major realms
+            of Classical physics: Newtonian mechanics
+          </p>
+
+          {/* TEAM GRID */}
+          <div className="w-full mt-16 flex flex-col md:flex-row gap-16 md:gap-10 items-center justify-between">
+            {/* CARD */}
+            <div className="flex flex-col items-center text-center">
+              <img
+                src="/images/aboutpage/team1.jpg"
+                alt="team member"
+                className="w-[320px] object-cover"
+              />
+
+              <h3 className="mt-6 text-[24px] font-semibold text-slate-800">
+                Username
+              </h3>
+
+              <p className="text-gray-500 text-[18px] mt-1 font-semibold">
+                Profession
+              </p>
+
+              <div className="flex gap-6 mt-4 text-[#23A6F0]">
+                <Facebook size={28} />
+                <Instagram size={28} />
+                <Twitter size={28} />
+              </div>
+            </div>
+
+            {/* CARD */}
+            <div className="flex flex-col items-center text-center">
+              <img
+                src="/images/aboutpage/team2.jpg"
+                alt="team member"
+                className="w-[320px] object-cover"
+              />
+
+              <h3 className="mt-6 text-[24px] font-semibold text-slate-800">
+                Username
+              </h3>
+
+              <p className="text-gray-500 text-[18px] mt-1 font-semibold">
+                Profession
+              </p>
+
+              <div className="flex gap-6 mt-4 text-[#23A6F0]">
+                <Facebook size={28} />
+                <Instagram size={28} />
+                <Twitter size={28} />
+              </div>
+            </div>
+
+            {/* CARD */}
+            <div className="flex flex-col items-center text-center">
+              <img
+                src="/images/aboutpage/team3.jpg"
+                alt="team member"
+                className="w-[320px] object-cover"
+              />
+
+              <h3 className="mt-6 text-[24px] font-semibold text-slate-800">
+                Username
+              </h3>
+
+              <p className="text-gray-500 text-[18px] font-semibold mt-1">
+                Profession
+              </p>
+
+              <div className="flex gap-6 mt-4 text-[#23A6F0]">
+                <Facebook size={28} />
+                <Instagram size={28} />
+                <Twitter size={28} />
               </div>
             </div>
           </div>
