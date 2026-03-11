@@ -221,6 +221,60 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section className="w-full bg-gray-100 px-6 py-24">
+        <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
+          {/* TITLE */}
+          <h2 className="text-[42px] md:text-[48px] font-bold text-slate-800 max-w-[260px] md:max-w-none">
+            Big Companies Are Here
+          </h2>
+
+          {/* DESCRIPTION */}
+          <p className="mt-6 md:mt-10 font-semibold text-gray-500 text-[22px] md:text-[26px] max-w-[700px] leading-relaxed">
+            Problems trying to resolve the conflict between the two major realms
+            of Classical physics: Newtonian mechanics
+          </p>
+
+          {/* LOGOS */}
+          <div className="mt-16 md:mt-25 flex flex-col md:flex-row items-center justify-between w-full gap-14 md:gap-10">
+            <img
+              src="/images/aboutpage/logo1.png"
+              alt="company logo"
+              className="w-[200px] md:w-[400px] opacity-70"
+            />
+
+            <img
+              src="/images/aboutpage/logo2.png"
+              alt="company logo"
+              className="w-[200px] md:w-[400px] opacity-70"
+            />
+
+            <img
+              src="/images/aboutpage/logo3.png"
+              alt="company logo"
+              className="w-[200px] md:w-[400px]opacity-70"
+            />
+
+            <img
+              src="/images/aboutpage/logo4.png"
+              alt="company logo"
+              className="w-[200px] md:w-[400px] opacity-70"
+            />
+
+            <img
+              src="/images/aboutpage/logo5.png"
+              alt="company logo"
+              className="w-[200px] md:w-[400px] opacity-70"
+            />
+
+            <img
+              src="/images/aboutpage/logo6.png"
+              alt="company logo"
+              className="w-[200px] md:w-[400px] opacity-70"
+            />
+          </div>
+        </div>
+      </section>
     </>
   );
 }
