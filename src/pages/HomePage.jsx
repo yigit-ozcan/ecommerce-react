@@ -563,7 +563,7 @@ function HomePage() {
             <div className="md:w-1/3">
               <PostCard
                 imageMobile="/images/homepage/post6.jpg"
-                imageDesktop="/images/homepage/ post3.jpg"
+                imageDesktop="/images/homepage/post3.jpg"
                 title="Loudest à la Madison #1 (L'integral)"
                 description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
                 date="22 April 2021"

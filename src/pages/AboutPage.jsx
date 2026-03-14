@@ -275,6 +275,41 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section className="w-full bg-[#2A7CC7]">
+        <div className="flex flex-col md:flex-row items-center md:min-h-[720px]">
+          {/* LEFT CONTENT */}
+          <div className="w-full md:w-3/5">
+            <div className="max-w-7xl mx-auto px-6 py-24 md:px-60 flex flex-col items-center md:items-start text-center md:text-left text-white">
+              <span className="text-[16px] md:text-[20px] font-semibold tracking-widest">
+                WORK WITH US
+              </span>
+
+              <h2 className="mt-6 text-[48px] md:text-[56px] font-bold leading-tight max-w-[600px]">
+                Now Let’s grow Yours
+              </h2>
+
+              <p className="mt-6 text-[24px] md:text-[22px] leading-relaxed max-w-[600px] opacity-90">
+                The gradual accumulation of information about atomic and
+                small-scale behavior during the first quarter of the 20th
+              </p>
+
+              <button className="mt-10 px-10 md:px-12 py-4 md:py-5 md:text-[22px] border border-white rounded-md text-white font-semibold hover:bg-white hover:text-[#2A7CC7] transition">
+                Button
+              </button>
+            </div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="hidden md:block md:w-2/5">
+            <img
+              src="/images/aboutpage/workwithus.jpg"
+              alt="model"
+              className="w-full h-[720px] object-cover"
+            />
+          </div>
+        </div>
+      </section>
     </>
   );
 }
