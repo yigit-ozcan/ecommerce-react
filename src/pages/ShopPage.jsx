@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProductCard from "../components/ProductCard";
 import { LayoutGrid, List } from "lucide-react";
-import products from "../data/products"; // ✅ EKLENDİ
+import products from "../data/products";
 
 function ShopPage() {
   const categories = [
@@ -16,15 +16,12 @@ function ShopPage() {
 
   const mobileProducts = products.slice((page - 1) * 4, page * 4);
 
-  const desktopProducts = [
-    ...products.slice((page - 1) * 4),
-    ...products.slice(0, (page - 1) * 4),
-  ];
+  // 🔥 FIX: undefined hatasını kaldırdık
+  const desktopProducts = products;
 
   return (
     <>
       {/* CATEGORY SECTION */}
-
       <section className="w-full bg-[#FAFAFA] py-12 md:py-16">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-10">
@@ -64,7 +61,6 @@ function ShopPage() {
       </section>
 
       {/* PRODUCTS SECTION */}
-
       <section className="w-full bg-white py-16 md:py-24">
         <div className="max-w-[1200px] mx-auto px-12 md:px-6">
           <div className="flex flex-col md:flex-row md:justify-between items-center mb-12 gap-6 relative">
@@ -101,18 +97,22 @@ function ShopPage() {
 
           {/* MOBILE */}
           <div className="flex flex-col gap-12 md:hidden">
-            {mobileProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
+            {mobileProducts.map(
+              (product) =>
+                product && <ProductCard key={product.id} product={product} />,
+            )}
           </div>
 
           {/* DESKTOP */}
           <div className="hidden md:flex md:flex-row md:flex-wrap md:gap-8">
-            {desktopProducts.map((product) => (
-              <div key={product.id} className="md:w-[calc(25%-1.5rem)]">
-                <ProductCard product={product} />
-              </div>
-            ))}
+            {desktopProducts.map(
+              (product) =>
+                product && (
+                  <div key={product.id} className="md:w-[calc(25%-1.5rem)]">
+                    <ProductCard product={product} />
+                  </div>
+                ),
+            )}
           </div>
         </div>
       </section>

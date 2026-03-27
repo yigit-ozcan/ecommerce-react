@@ -1,22 +1,24 @@
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import ShopPage from "../pages/ShopPage";
 import ContactPage from "../pages/ContactPage";
 import TeamPage from "../pages/TeamPage";
 import AboutPage from "../pages/AboutPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
+import SignupPage from "../pages/SignupPage";
 
 function PageContent() {
   return (
     <main className="flex-1">
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/shop" component={ShopPage} />
-        <Route path="/contact" component={ContactPage} />
-        <Route path="/team" component={TeamPage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/product/:id" component={ProductDetailPage} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/product/:id" element={<ProductDetailPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+      </Routes>
     </main>
   );
 }

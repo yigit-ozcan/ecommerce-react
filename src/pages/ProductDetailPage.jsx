@@ -42,7 +42,7 @@ function ProductDetailPage() {
             <h1 className="text-[24px] font-semibold">{product.title}</h1>
 
             <div className="flex gap-2">
-              <span className="text-yellow-400 text-lg">★★★★★</span>
+              <span className="text-yellow-400">★★★★★</span>
               <span>10 Reviews</span>
             </div>
 
