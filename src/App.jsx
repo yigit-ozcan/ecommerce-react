@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setUser } from "./store/actions/clientActions";
+import { setUser, verifyToken } from "./store/actions/clientActions";
 
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
@@ -16,6 +16,9 @@ function App() {
     if (token && user) {
       dispatch(setUser(JSON.parse(user)));
     }
+
+    // 🔥 VERIFY ÇAĞRISI
+    dispatch(verifyToken());
   }, [dispatch]);
 
   return (

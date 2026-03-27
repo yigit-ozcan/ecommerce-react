@@ -1,4 +1,4 @@
-import api from "../../api/axios";
+import api, { setAuthToken } from "../../api/axios";
 
 // BASIC ACTIONS
 export const setUser = (data) => ({
@@ -43,13 +43,58 @@ export const loginUser = (data) => {
 
     const user = res.data;
 
-    dispatch(setUser(user)); // 🔥 KRİTİK
+    dispatch(setUser(user));
+
+    // 🔥 TOKEN HEADER'A KOY
+    setAuthToken(user.token);
 
     if (data.remember) {
       localStorage.setItem("token", user.token);
-      localStorage.setItem("user", JSON.stringify(user)); // 🔥 SADECE BU SATIR EKLENDİ
+      localStorage.setItem("user", JSON.stringify(user));
+    } else {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
     }
 
     return user;
+  };
+};
+
+// 🔥 VERIFY TOKEN (FIXLİ HAL)
+export const verifyToken = () => {
+  return async (dispatch) => {
+    const token = localStorage.getItem("token");
+
+    if (!token) return;
+
+    try {
+      // header'a koy
+      setAuthToken(token);
+
+      const res = await api.get("/verify");
+
+      const user = res.data;
+
+      // redux'a koy
+      dispatch(setUser(user));
+
+      // token yenile (varsa)
+      if (user.token) {
+        localStorage.setItem("token", user.token);
+        setAuthToken(user.token);
+      }
+    } catch (err) {
+      // ❌ TOKEN GEÇERSİZ
+
+      // local temizle
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+
+      // header temizle
+      setAuthToken(null);
+
+      // 🔥 KRİTİK FIX: REDUX USER TEMİZLE
+      dispatch(setUser(null));
+    }
   };
 };
