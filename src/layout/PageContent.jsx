@@ -6,6 +6,7 @@ import TeamPage from "../pages/TeamPage";
 import AboutPage from "../pages/AboutPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
 import SignupPage from "../pages/SignupPage";
+import LoginPage from "../pages/LoginPage";
 
 function PageContent() {
   return (
@@ -18,6 +19,7 @@ function PageContent() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/product/:id" element={<ProductDetailPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </main>
   );

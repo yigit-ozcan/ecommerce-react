@@ -1,5 +1,5 @@
 const initialState = {
-  user: {},
+  user: null, // 🔥 null olmalı
   addressList: [],
   creditCards: [],
   roles: [],
@@ -10,16 +10,28 @@ const initialState = {
 export default function clientReducer(state = initialState, action) {
   switch (action.type) {
     case "SET_USER":
-      return { ...state, user: action.payload };
+      return {
+        ...state,
+        user: action.payload, // 🔥 overwrite
+      };
 
     case "SET_ROLES":
-      return { ...state, roles: action.payload };
+      return {
+        ...state,
+        roles: action.payload,
+      };
 
     case "SET_THEME":
-      return { ...state, theme: action.payload };
+      return {
+        ...state,
+        theme: action.payload,
+      };
 
     case "SET_LANGUAGE":
-      return { ...state, language: action.payload };
+      return {
+        ...state,
+        language: action.payload,
+      };
 
     default:
       return state;
