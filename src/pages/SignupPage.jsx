@@ -1,8 +1,15 @@
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchRolesIfNeeded } from "../store/actions/clientActions";
 import api from "../api/axios";
 
 function SignupPage() {
+  const dispatch = useDispatch();
+  const roles = useSelector((state) => state.client.roles);
+
+  console.log("ROLES FROM REDUX:", roles);
+
   const {
     register,
     handleSubmit,
@@ -10,14 +17,12 @@ function SignupPage() {
     formState: { errors },
   } = useForm();
 
-  const [roles, setRoles] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  // 🔥 ARTIK BURASI REDUX
   useEffect(() => {
-    api.get("/roles").then((res) => {
-      setRoles(res.data);
-    });
-  }, []);
+    dispatch(fetchRolesIfNeeded());
+  }, [dispatch]);
 
   const selectedRole = watch("role_id");
 
@@ -37,7 +42,6 @@ function SignupPage() {
 
       alert("You need to click link in email to activate your account!");
 
-      // 🔥 FIX BURADA
       window.location.href = "/shop";
     } catch (err) {
       alert(err.response?.data?.message || "Error");
@@ -89,9 +93,6 @@ function SignupPage() {
           })}
           className="border p-3"
         />
-        {errors.password && (
-          <p className="text-red-500">{errors.password.message}</p>
-        )}
 
         <input
           type="password"
@@ -102,10 +103,8 @@ function SignupPage() {
           })}
           className="border p-3"
         />
-        {errors.confirmPassword && (
-          <p className="text-red-500">{errors.confirmPassword.message}</p>
-        )}
 
+        {/* 🔥 ROLE ARTIK REDUX’TAN */}
         <select
           {...register("role_id")}
           className="border p-3"
@@ -118,6 +117,7 @@ function SignupPage() {
           ))}
         </select>
 
+        {/* STORE */}
         {selectedRoleObj?.code === "store" && (
           <>
             <input
@@ -125,19 +125,16 @@ function SignupPage() {
               {...register("store.name")}
               className="border p-3"
             />
-
             <input
-              placeholder="Store Phone"
+              placeholder="Phone"
               {...register("store.phone")}
               className="border p-3"
             />
-
             <input
-              placeholder="Tax ID"
+              placeholder="Tax"
               {...register("store.tax_no")}
               className="border p-3"
             />
-
             <input
               placeholder="IBAN"
               {...register("store.bank_account")}
@@ -146,11 +143,7 @@ function SignupPage() {
           </>
         )}
 
-        <button
-          type="submit"
-          disabled={loading}
-          className="bg-[#23A6F0] text-white py-3 font-semibold"
-        >
+        <button disabled={loading} className="bg-[#23A6F0] text-white py-3">
           {loading ? "Loading..." : "Sign Up"}
         </button>
       </form>
