@@ -4,6 +4,7 @@ import ShopPage from "../pages/ShopPage";
 import ContactPage from "../pages/ContactPage";
 import TeamPage from "../pages/TeamPage";
 import AboutPage from "../pages/AboutPage";
+import ProductDetailPage from "../pages/ProductDetailPage";
 
 function PageContent() {
   return (
@@ -14,6 +15,7 @@ function PageContent() {
         <Route path="/contact" component={ContactPage} />
         <Route path="/team" component={TeamPage} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/product/:id" component={ProductDetailPage} />
       </Switch>
     </main>
   );
